@@ -1,0 +1,20 @@
+name: Notify site
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      # Needs secret SITE_REPO_TOKEN (a fine-grained token with
+      # "Contents: read and write" on the site repo) and
+      # repo variable SITE_REPO, e.g. your-user/java-tutorials-site.
+      - name: Trigger site rebuild
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.SITE_REPO_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ vars.SITE_REPO }}/dispatches \
+            -d '{"event_type":"content-updated"}'

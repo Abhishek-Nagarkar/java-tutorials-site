@@ -1,0 +1,17 @@
+:root {
+	--sl-color-accent-low: #cfeadb;
+	--sl-color-accent: #1f7a4d;
+	--sl-color-accent-high: #0f4a2e;
+}
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #0f3a25;
+	--sl-color-accent: #4cc38a;
+	--sl-color-accent-high: #bfeed7;
+}
+.done-tick { color: var(--sl-color-accent); margin-left: 0.35em; }
+.complete-btn {
+	margin-top: 2.5rem; padding: 0.6rem 1.1rem; font: inherit; cursor: pointer;
+	border-radius: 6px; border: 1px solid var(--sl-color-accent);
+	background: transparent; color: var(--sl-color-accent);
+}
+.complete-btn[aria-pressed='true'] { background: var(--sl-color-accent); color: var(--sl-color-black); }
