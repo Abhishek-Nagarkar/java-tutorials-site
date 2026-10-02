@@ -7,7 +7,7 @@ export default defineConfig({
 	// site: 'https://your-site.pages.dev',
 	integrations: [
 		starlight({
-			title: 'Spring by Building',
+			title: 'DevCoded',
 			description: 'Learn Java and Spring Boot by building real apps.',
 			// social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/YOUR-USER' }],
 			customCss: ['./src/styles/custom.css'],
