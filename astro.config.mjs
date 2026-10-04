@@ -13,7 +13,8 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			head: [{ tag: 'script', attrs: { src: '/progress.js', defer: true } }],
 			sidebar: [
-				{ label: 'Build a URL shortener', items: [{ autogenerate: { directory: 'courses/url-shortener' } }] },
+  				{ label: 'Build a URL shortener', items: [{ autogenerate: { directory: 'courses/url-shortener' } }] },
+  				{ label: 'Java interview questions', items: [{ autogenerate: { directory: 'courses/java-interview' } }] },
 			],
 		}),
 	],
